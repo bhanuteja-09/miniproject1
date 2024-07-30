@@ -289,12 +289,12 @@ footer p {
 .social-media .fas.fa-envelope { color:white;  }
 .social-media .fab.fa-google {color:white;  }
 
-@media (min-width: 769px) and (max-width: 1290px) {
+/* @media (min-width: 769px) and (max-width: 1290px) {
     footer {
         bottom: -500px;
         width: 95%;
     }
-}
+} */
 
 /* Responsive styles for tablets */
 @media (max-width: 768px)  {
