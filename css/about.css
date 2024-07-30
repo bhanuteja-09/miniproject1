@@ -1,138 +1,4 @@
 /* General Page Styling */
-/* body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-header {
-    background: #6363d2;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .logo {
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-}
-
-header .logo img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-left: 10px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin-right: 20px;
-}
-
-header nav ul li {
-    margin: 0 10px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-main {
-    width: 95%;
-    margin: 20px auto;
-    flex: 1;
-}
-
-footer {
-    background: #6363d2;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-    margin-top: auto;
-} */
-
-/* About Us Page Styling */
-.about-us {
-    margin-right: 20px;
-    margin-left: 30px;
-    padding: 20px;
-    max-width:96%;
-    /* margin: auto; */
-    text-align: left;
-    background-color: #efe1e1;
-    /* background-color: #f9f9f9; */
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.about-us h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-    /* text-transform: uppercase;  */
-    /* Convert text to uppercase */
-    letter-spacing: 2px; /* Add letter spacing */
-    font-weight: bold; /* Make the text bold */
-    text-shadow: 4px 4px 4px rgba(123, 137, 222, 0.444); /* Add text shadow */
-}
-
-.about-us p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.our-mission, .our-values {
-    margin-top: 40px;
-    margin-left: 30px;
-}
-
-.our-mission h2, .our-values h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.our-values ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.our-values ul li {
-    font-size: 1rem;
-
-    color: #555;
-    margin-bottom: 10px;
-}
-
-
-
-
-
-
-
 body {
     display: flex;
     flex-direction: column;
@@ -140,18 +6,19 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
+
 /* Header styling */
 header {
     background: #6363d2;
     color: #fff;
     padding: 1rem 0;
-    text-align: center;
-    width: 98%;
-    /* top:10px; */
-    margin-left: 20px;
+    width: 100%;
     border-radius: 5px;
+    position: relative; /* Ensure it doesn't overlap other content */
 }
+
 header .container {
     display: flex;
     justify-content: space-between;
@@ -161,12 +28,12 @@ header .container {
     padding: 0 20px;
 }
 
-
 header .logo {
     font-size: 1.5rem;
     display: flex;
     align-items: center;
 }
+
 header .logo img {
     width: 60px;
     height: 60px;
@@ -177,13 +44,11 @@ header .logo img {
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     padding: 0;
     margin: 0;
 }
 
 header nav ul li {
-    /* display: inline; */
     margin: 0 10px;
 }
 
@@ -201,71 +66,132 @@ header nav ul li a i {
 
 /* Main content styling */
 main {
-    /* padding: 20px; */
     flex: 1;
-    width: 100%;
+    width: 95%;
+    margin: 20px auto;
     padding: 20px;
 }
 
+/* About Us Page Styling */
+.about-us, .our-mission, .our-values {
+    margin: 20px;
+    padding: 20px;
+    background-color: #efe1e1;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgba(123, 137, 222, 0.444);
+}
+
+.about-us p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.our-mission h2, .our-values h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.our-values ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.our-values ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
 footer {
     background: #6363d2;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: absolute;
-    /* position: relative; */
-    bottom: -400px;
-    width: 98%;
-    /* top:10px; */
-    margin-left: 20px;
+    width: 100%;
     border-radius: 5px;
+    margin-top: auto;
 }
+
 footer p {
     margin: 0;
-    margin-left: 120px;
-  
 }
+
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
 .social-media {
     display: flex;
-    margin-right: 100px;
 }
 
 .social-media a {
     font-size: 1.5rem;
     margin-left: 20px;
+    color: #fff; /* Ensure icons are white */
 }
-.social-media .fab.fa-facebook-f { color:white; }
-.social-media .fab.fa-twitter { color:white; }
-.social-media .fab.fa-linkedin-in { color:white; }
-.social-media .fab.fa-instagram {color:white; }
-.social-media .fas.fa-envelope { color:white;  }
-.social-media .fab.fa-google {color:white;  }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Responsive adjustments */
+@media (max-width: 767px) { /* Mobile screens */
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media {
+        margin-top: 10px;
+    }
 }
-/* .logo{
-    text-align: left;
-    margin-left: 40px;
+
+@media (min-width: 768px) and (max-width: 991px) { /* Tablet screens */
+    header .container {
+        flex-direction: row;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
-.nav{
-    text-align: center;
-    
+
+@media (min-width: 992px) { /* Desktop screens */
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .about-us, .our-mission, .our-values {
+        margin: 20px auto;
+        max-width: 1200px;
+    }
 }
-.logo img{
-    width:60px;
-  height: 30%;
-  border-radius:90%;
-  margin-bottom: -25px;
-  margin-left: 10px;
-} */

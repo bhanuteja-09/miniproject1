@@ -4,29 +4,32 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-height: 100vh; /* Ensure body covers at least the full viewport height */
+    background-color: #f5f5f5; /* Set the background color */
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    flex-direction: column; /* Allow for flexible layout */
 }
 
 /* Header styles */
 header {
-    background: #6363d2;
+    background: #6363d2; /* Header background color */
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-    width: 98%;
-    border-radius: 5px;
-    margin-left: 20px;
+    width: 100%; /* Ensure full width */
+    border-radius: 0; /* Remove border-radius for full width */
+    margin: 0; /* Remove margin to align with body */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%; /* Ensure container spans full width */
     padding: 0 20px;
+    box-sizing: border-box; /* Include padding in width */
+    margin: 0; /* Remove margin */
 }
 
 header .logo {
@@ -68,9 +71,10 @@ header nav ul li a i {
 
 /* Main content styles */
 main {
-    flex: 1;
+    flex: 1; /* Allow main content to expand */
     width: 100%;
     padding: 20px;
+    box-sizing: border-box; /* Include padding in width */
 }
 
 /* Hero section styles */
@@ -78,6 +82,7 @@ main {
     position: relative;
     text-align: center;
     color: white;
+    background-color: #fcefef; /* Same background color as cards */
 }
 
 .hero img {
@@ -91,19 +96,22 @@ main {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    color: #333;
+    color: #fff;
+    background-color: #fcefef; /* Same background color as hero */
+    padding: 20px; /* Add padding to ensure background covers the text */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .hero-text h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
-    color: #101010;
+    color: #333;
 }
 
 .hero-text p {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    color: #0d0d0d;
+    color: #333;
 }
 
 .cta-button {
@@ -125,18 +133,12 @@ main {
 /* Featured products section styles */
 .featured-products {
     padding: 2rem;
-    background-color: #fcefef;
+    background-color: #fcefef; /* Same background color as hero and cards */
+    color: #333; /* Text color to contrast with background */
     text-align: center;
-    width: 94%;
-    margin-top: -180px;
-    border-radius: 5px;
-}
-
-.featured-products h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-    margin-top: 170px;
+    width: 100%; /* Full width */
+    border-radius: 0; /* Remove border-radius for full width */
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 /* Product grid and item styles */
@@ -146,6 +148,9 @@ main {
     gap: 1rem; /* Add space between cards */
     justify-content: center; /* Center the cards horizontally */
     margin: 0 auto; /* Center the grid itself */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Limit the width to fit within header and footer */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .product-item {
@@ -156,6 +161,7 @@ main {
     text-align: center;
     width: 100%; /* Full width on mobile by default */
     max-width: 400px; /* Max width for cards */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .product-item img {
@@ -177,6 +183,47 @@ main {
 }
 
 /* Responsive adjustments */
+@media (max-width: 767px) { /* Mobile screens */
+    header {
+        padding: 1rem 0;
+        box-sizing: border-box;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 10px; /* Adjust padding */
+    }
+
+    header .logo {
+        margin-bottom: 10px; /* Space below logo */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        padding: 1rem 0;
+        box-sizing: border-box;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 10px; /* Adjust padding */
+    }
+
+    .social-media {
+        margin-top: 10px;
+    }
+}
+
 @media (min-width: 576px) { /* Tablet screens (≥576px) */
     .product-item {
         width: calc(50% - 1rem); /* Two cards per row, with space between */
@@ -197,19 +244,14 @@ main {
 
 /* Footer styles */
 footer {
-    background: #6363d2;
+    background: #6363d2; /* Header background color */
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    width: 98.5%;
-    border-radius: 5px;
-    position: relative;
-    margin-left: 20px;
-}
-
-footer p {
-    margin: 0;
-    margin-left: 120px;
+    width: 100%; /* Ensure full width */
+    border-radius: 0; /* Remove border-radius for full width */
+    margin: 0; /* Remove margin to align with body */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
 .footer-content {
@@ -218,11 +260,13 @@ footer p {
     align-items: center;
     width: 100%;
     padding: 0 20px;
+    box-sizing: border-box; /* Include padding in width */
+    margin: 0; /* Remove margin */
 }
 
 .social-media {
     display: flex;
-    margin-right: 100px;
+    margin-right: 0; /* Reset margin for mobile view */
 }
 
 .social-media a {

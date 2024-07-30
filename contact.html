@@ -18,16 +18,15 @@
                     <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
                     <li><a href="contact.html"><i class="fas fa-address-card"></i> Contact Us</a></li>
                 </ul>
-    
             </nav>
         </div>
     </header>
-   <main>
+    <main>
         <div class="contact-us">
             <h1>Contact Us</h1>
             <p>We would love to hear from you! Please fill out this form and we will get in touch with you shortly.</p>
             
-            <form id="ContactUs Form" validate>
+            <form id="ContactUsForm" novalidate>
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -41,7 +40,6 @@
                 <div class="form-group">
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
-                    <!-- <span class="error">Message must be in min 10  and max 350 .</span> -->
                 </div>
                 <button type="submit">Submit</button>
             </form>
