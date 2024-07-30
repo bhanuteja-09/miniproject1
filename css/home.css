@@ -1,3 +1,4 @@
+/* General body styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,12 +9,13 @@ body {
     min-height: 100vh;
 }
 
+/* Header styles */
 header {
     background: #6363d2;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-    width:98%;
+    width: 98%;
     border-radius: 5px;
     margin-left: 20px;
 }
@@ -64,12 +66,14 @@ header nav ul li a i {
     margin-right: 5px; /* Spacing between icon and text */
 }
 
+/* Main content styles */
 main {
     flex: 1;
     width: 100%;
     padding: 20px;
 }
 
+/* Hero section styles */
 .hero {
     position: relative;
     text-align: center;
@@ -82,7 +86,7 @@ main {
 }
 
 .hero-text {
-    position:relative;
+    position: relative;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -94,7 +98,6 @@ main {
     font-size: 3rem;
     margin-bottom: 0.5rem;
     color: #101010;
-
 }
 
 .hero-text p {
@@ -113,21 +116,18 @@ main {
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s;
-    /* margin-left: auto; */
-    /* margin-right: 30px; */
-    
-
 }
 
 .cta-button:hover {
     background-color: #0056b3;
 }
 
+/* Featured products section styles */
 .featured-products {
     padding: 2rem;
     background-color: #fcefef;
     text-align: center;
-    width:94%;
+    width: 94%;
     margin-top: -180px;
     border-radius: 5px;
 }
@@ -139,26 +139,23 @@ main {
     margin-top: 170px;
 }
 
+/* Product grid and item styles */
 .product-grid {
-    margin-left: -40px;
-    width: 1500px;
-     margin-top: 150px;
     display: flex;
-    /* justify-content: center; */
-    /* flex-wrap: wrap; */
-    gap: 1rem; /* Add a gap between items */
-    margin-top: 20px;
-
+    flex-wrap: wrap;
+    gap: 1rem; /* Add space between cards */
+    justify-content: center; /* Center the cards horizontally */
+    margin: 0 auto; /* Center the grid itself */
 }
 
 .product-item {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    margin: 1rem;
     padding: 1rem;
     text-align: center;
+    width: 100%; /* Full width on mobile by default */
+    max-width: 400px; /* Max width for cards */
 }
 
 .product-item img {
@@ -178,17 +175,27 @@ main {
     font-size: 1rem;
     color: #555;
 }
-.heading{
-    text-align: center;
-    font-size: 2.6rem; /* Adjust the font size */
-    color: #333;
-    margin-bottom: 20px; /* Add spacing below the heading */
-    text-transform:initial; /* Convert text to uppercase */
-    letter-spacing: 2px; /* Add letter spacing */
-    font-weight: bold; /* Make the text bold */
-    text-shadow: 4px 4px 4px rgba(104, 99, 195, 0.444); /* Add text shadow */
+
+/* Responsive adjustments */
+@media (min-width: 576px) { /* Tablet screens (≥576px) */
+    .product-item {
+        width: calc(50% - 1rem); /* Two cards per row, with space between */
+    }
 }
 
+@media (min-width: 768px) { /* Desktop screens (≥768px) */
+    .product-item {
+        width: calc(25% - 1rem); /* Four cards per row, with space between */
+    }
+}
+
+@media (min-width: 992px) { /* Larger desktop screens (≥992px) */
+    .product-grid {
+        width: 80%; /* 80% of the viewport width */
+    }
+}
+
+/* Footer styles */
 footer {
     background: #6363d2;
     color: #fff;
@@ -203,8 +210,8 @@ footer {
 footer p {
     margin: 0;
     margin-left: 120px;
-  
 }
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -222,9 +229,22 @@ footer p {
     font-size: 1.5rem;
     margin-left: 20px;
 }
-.social-media .fab.fa-facebook-f { color:white; }
-.social-media .fab.fa-twitter { color:white; }
-.social-media .fab.fa-linkedin-in { color:white; }
-.social-media .fab.fa-instagram {color:white; }
-.social-media .fas.fa-envelope { color:white;  }
-.social-media .fab.fa-google {color:white;  }
+
+.social-media .fab.fa-facebook-f { color: white; }
+.social-media .fab.fa-twitter { color: white; }
+.social-media .fab.fa-linkedin-in { color: white; }
+.social-media .fab.fa-instagram { color: white; }
+.social-media .fas.fa-envelope { color: white; }
+.social-media .fab.fa-google { color: white; }
+
+/* Additional styles */
+.heading {
+    text-align: center;
+    font-size: 2.6rem; /* Adjust the font size */
+    color: #333;
+    margin-bottom: 20px; /* Add spacing below the heading */
+    text-transform: initial; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add letter spacing */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 4px 4px 4px rgba(104, 99, 195, 0.444); /* Add text shadow */
+}
