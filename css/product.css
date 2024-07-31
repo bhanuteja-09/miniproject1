@@ -10,6 +10,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
 }
 
 /* Header styling */
@@ -18,17 +20,20 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-    width: 98%;
-    margin-left: 20px;
-    border-radius: 5px;
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
     padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 header .logo {
@@ -36,6 +41,7 @@ header .logo {
     display: flex;
     align-items: center;
 }
+
 header .logo img {
     width: 60px;
     height: 60px;
@@ -64,7 +70,7 @@ header nav ul li a {
 }
 
 header nav ul li a i {
-    margin-right: 5px; /* Spacing between icon and text */
+    margin-right: 5px;
 }
 
 /* Main content styling */
@@ -72,6 +78,7 @@ main {
     flex: 1;
     width: 100%;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 #products {
@@ -83,17 +90,18 @@ main {
     margin-bottom: 20px;
 }
 
+/* Product row and items styling */
 .product-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center align the product row */
-    gap: 20px; /* Add space between cards */
-    max-width: 1200px; /* Ensure the product row fits within header and footer width */
-    margin: 0 auto; /* Center the product row */
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .product-item {
-    background: #e0f5fb; /* Same background color */
+    background: #e0f5fb;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -140,7 +148,7 @@ main {
 
 .product-item .actions {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Ensures equal spacing between buttons */
     margin-top: 10px;
 }
 
@@ -148,14 +156,18 @@ main {
     background: #2196F3;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px;
     cursor: pointer;
     border-radius: 5px;
     transition: background 0.3s ease;
     height: 40px;
-    width: 150px;
-    margin-right: 6px;
-    font-size: 0.65rem; /* Adjust the font size */
+    width: 100%; /* Ensure buttons are the same size */
+    margin-right: 10px; /* Space between buttons */
+    font-size: 0.9rem;
+}
+
+.product-item .actions button:last-child {
+    margin-right: 0; /* Remove right margin from the last button */
 }
 
 .product-item .actions button:hover {
@@ -221,10 +233,10 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: relative; /* Change position to relative */
-    width: 98%;
-    margin-left: 20px;
-    border-radius: 5px;
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 footer p {
@@ -237,6 +249,8 @@ footer p {
     align-items: center;
     width: 100%;
     padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .social-media {
@@ -257,68 +271,53 @@ footer p {
     color: white;
 }
 
-/* Responsive styles for tablets */
-@media (max-width: 768px) {
-    header {
-        width: 95%;
-    }
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul li {
-        margin: 5px 0;
-    }
-
+/* Responsive styles for tablets (mid-screen width) */
+@media (min-width: 768px) and (max-width: 1024px) {
     .product-row {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .product-item {
-        width: 80%;
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
     }
 
-    footer {
-        width: 95%;
+    .product-item:nth-child(1),
+    .product-item:nth-child(2) {
+        margin-right: 20px;
     }
 
-    .product-item .actions {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    .product-item .actions button {
-        background: #2196F3;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background 0.3s ease;
-        height: 40px;
-        margin-bottom: 10px;
-        width: 100%;
-        margin-left: -1px;
-    }
-
-    .product-item .actions button:hover {
-        background: #0e5ab3;
+    .product-item:nth-child(2n) {
+        margin-right: 0;
     }
 }
 
 /* Responsive styles for mobile devices */
 @media (max-width: 480px) {
     header {
-        width: 90%;
-        margin-top: 10px;
+        padding: 1rem 0;
+        box-sizing: border-box;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 10px;
     }
 
     header .logo {
-        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
     }
 
     .product-item {
@@ -337,24 +336,36 @@ footer p {
         font-size: 0.8rem;
     }
 
+    .product-item .actions {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        align-items: stretch; /* Ensure buttons take full width */
+    }
+
     .product-item .actions button {
-        padding: 8px 16px;
-        font-size: 0.8rem;
-        height: auto;
-        width: 100px;
+        padding: 8px; /* Adjust padding for better touch targets */
+        font-size: 0.8rem; /* Smaller font size for better fit */
+        width: 100%; /* Ensure buttons are the same width */
+        margin-bottom: 10px; /* Space between stacked buttons */
+    }
+
+    .product-item .actions button:last-child {
+        margin-bottom: 0; /* Remove bottom margin from the last button */
     }
 
     .special-buttons button {
-        font-size: 0.5rem;
+        font-size: 0.5rem; /* Adjust font size for small devices */
+        padding: 8px 10px; /* Adjust padding for better fit */
     }
 
     footer {
         font-size: 0.8rem;
-        margin-left: 20px;
-        width: 90%;
+        margin: 0;
+        width: 100%;
     }
 
     .footer-content {
-        margin-left: 0;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 10px;
     }
 }
