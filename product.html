@@ -41,7 +41,7 @@
                 
                 <p class="description">The latest smartphone with advanced features and powerful performance.</p>
                 <div class="actions">
-                    <button>Add to Cart</button>
+                    <button class="add-to-cart">Add to Cart</button>
                     <button class="wishlist-button">Add to Wishlist</button>
                 </div>
             </div>
@@ -59,8 +59,8 @@
                
                 <p class="description">Ultra-slim laptop with stunning display and long battery life.</p>
                 <div class="actions">
-                    <button>Add to Cart</button>
-                    <button>Add to Wishlist</button>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="wishlist-button">Add to Wishlist</button>
                 </div>
             </div>
             
@@ -78,8 +78,8 @@
                 
                 <p class="description">Wireless headphones with noise-cancelling technology for immersive audio experience.</p>
                 <div class="actions">
-                    <button>Add to Cart</button>
-                    <button>Add to Wishlist</button>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="wishlist-button">Add to Wishlist</button>
                 </div>
             </div>
                 
@@ -117,8 +117,8 @@
                     
                     <p class="description">Smartwatch with very great health and fitness tracking features.</p>
                     <div class="actions">
-                        <button>Add to Cart</button>
-                        <button>Add to Wishlist</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist-button">Add to Wishlist</button>
                     </div>
                 </div>
                 
@@ -152,8 +152,8 @@
                    
                     <p class="description">High-speed wireless router for seamless internet connectivity.</p>
                     <div class="actions">
-                        <button>Add to Cart</button>
-                        <button>Add to Wishlist</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist-button">Add to Wishlist</button>
                     </div>
                 </div>
                 
@@ -170,8 +170,8 @@
                     </div>
                     <p class="description">Professional-grade digital camera for stunning photos and videos.</p>
                     <div class="actions">
-                        <button>Add to Cart</button>
-                        <button>Add to Wishlist</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist-button">Add to Wishlist</button>
                     </div>
                 </div>
             </div>
@@ -191,6 +191,29 @@
                 </div>
             </div>
         </footer>
+
+        <!-- JavaScript to handle button clicks -->
+    <script>
+        // Function to display alert for Add to Cart button
+        function addToCart() {
+            alert('Added to cart successfully');
+        }
+
+        // Function to display alert for Add to Wishlist button
+        function addToWishlist() {
+            alert('Added to wishlist successfully');
+        }
+
+        // Add event listeners to all buttons with the class 'add-to-cart'
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', addToCart);
+        });
+
+        // Add event listeners to all buttons with the class 'wishlist-button'
+        document.querySelectorAll('.wishlist-button').forEach(button => {
+            button.addEventListener('click', addToWishlist);
+        });
+    </script>
 </body>
 </html>
                 
